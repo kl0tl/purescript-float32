@@ -6,12 +6,10 @@ import Prelude
   ( class Eq, class Ord, class Show, class Semiring, class Ring, class Bounded, class EuclideanRing
   , class CommutativeRing, class DivisionRing
   , top, bottom, (==), (||))
-import Data.Generic.Rep (class Generic)
 import Data.Maybe (Maybe (..))
 
 newtype Float32 = Float32 Number
 
-derive instance genericeFloat32 :: Generic Float32 _
 derive newtype instance eqFloat32 :: Eq Float32
 derive newtype instance ordFloat32 :: Ord Float32
 derive newtype instance semiringFloat32 :: Semiring Float32
